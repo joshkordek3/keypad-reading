@@ -54,8 +54,8 @@ enum EnumPressed {
     //% block="is not"
     isNot
 }
-//% color=#D400D4 weight=111 icon="\uf192"
-namespace input {
+//% color=#D8BFD8 weight=111 icon="\uf11c"
+namespace keypad {
     let pinBinds = [[0, 1, 2, 8], [13, 14, 15, 16]]
     function not (bool: boolean) {
         return !bool
