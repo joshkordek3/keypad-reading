@@ -56,8 +56,10 @@ enum EnumPressed {
 }
 //% color=#D400D4 weight=111 icon="\uf192"
 namespace input {
-    let pinBinds = [[0, 1, 2, 5], [8, 11, 13, 14]]
-    const not = (bool: boolean) => (!(bool))
+    let pinBinds = [[0, 1, 2, 8], [13, 14, 15, 16]]
+    function not (bool: boolean) {
+        return !bool
+    }
     //% block="set pin binds to: rows: $rows, columns: $columns"
     export function editPins (rows: number[], columns: number[]) {
         pinBinds = [rows, columns]
@@ -78,4 +80,9 @@ namespace input {
             }
         })
     }
+    // block="when a key is pressed"
+    // draggableParameters=reporter
+    // export function anyKeyPressed (handler: (key: number) => void) {
+        
+    // }
 }
