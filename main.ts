@@ -66,9 +66,9 @@ namespace keypad {
     }
     //% block="$key is pressed"
     export function isKeyPressed (key: Keys) {
-        let pin = pins.digitalReadPin(pinBinds[0][((key + 1) % 4) - 1])
+        let pin = pinBinds[1][key % 4] + 100
         pins.digitalWritePin(pin, 1)
-        let bool = pins.digitalReadPin(pinBinds[1][key % 4]) == 1;
+        let bool = pins.digitalReadPin(pinBinds[0][((key + 1) % 4) - 1]) == 1;
         pins.digitalWritePin(pin, 0);
         return bool;
     }
